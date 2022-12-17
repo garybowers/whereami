@@ -14,13 +14,13 @@ spec:
     metadata:
       labels:
         app: whereami
-  spec:
-    containers:
-    - name: whereami
-      image: gcr.io/b1-services-230040/whereami:v0.0.1
-      imagePullPolicy: Always
-      ports:
-      - containerPort: 8080
+    spec:
+      containers:
+      - name: whereami
+        image: gcr.io/b1-services-230040/whereami:v0.0.1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
