@@ -7,7 +7,7 @@ metadata:
 spec:
   project: app-whereami
   source:
-    repoURL: https://github.com/garybowers/whereami.git 
+    repoURL: https://github.com/garybowers/whereami 
     targetRevision: HEAD
     path: deployment
   destination:
@@ -28,7 +28,7 @@ spec:
   source:
     repoURL: https://github.com/garybowers/whereami.git 
     targetRevision: HEAD
-    path: deployment/manifests
+    path: deployment
   destination:
     server: https://172.16.0.18
     namespace: app-whereami
