@@ -1,0 +1,38 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: whereami-euw6 
+  namespace: argocd 
+spec:
+  project: app-whereami
+  source:
+    repoURL: https://github.com/garybowers/whereami.git 
+    targetRevision: HEAD
+    path: deployment
+  destination:
+    server: https://192.168.0.2
+    namespace: app-whereami
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: whereami-ausse1
+  namespace: argocd 
+spec:
+  project: app-whereami
+  source:
+    repoURL: https://github.com/garybowers/whereami.git 
+    targetRevision: HEAD
+    path: deployment/manifests
+  destination:
+    server: https://172.16.0.18
+    namespace: app-whereami
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
