@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: whereami
-        image: gcr.io/b1-services-230040/whereami:v0.0.1
+        image: gcr.io/b1-services-230040/whereami:v0.0.2
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

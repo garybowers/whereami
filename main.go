@@ -23,6 +23,8 @@ func root(w http.ResponseWriter, req *http.Request) {
 	log.Println(clusterName + " -- " + clusterLocation)
 
 	fmt.Fprintf(w, clusterName)
+	fmt.Fprintf(w, "\n")
+	fmt.Fprintf(w, "\n")
 	fmt.Fprintf(w, clusterLocation)
 }
 
