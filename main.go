@@ -42,7 +42,7 @@ func getCurrentClusterName() (clusterName string, err error) {
 		log.Fatal(err)
 	}
 
-	b, err := httputil.DumpResponse(resp, true)
+	b, err := httputil.DumpResponse(resp, false)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -64,7 +64,7 @@ func getCurrentClusterLocation() (clusterLocation string, err error) {
 		log.Fatal(err)
 	}
 
-	b, err := httputil.DumpResponse(resp, true)
+	b, err := httputil.DumpResponse(resp, false)
 	if err != nil {
 		log.Fatal(err)
 	}
